@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1>Pamintuan, Eljan Joel Y. | WD302 | Quiz</h1>
+    <!-- Date Pipes -->
+    <p>{{ currentDate | date:'shortDate' }}</p>
+    <p>{{ currentDate | date:'fullDate' }}</p>
+    <p>{{ currentDate | date:'MM/dd/yyyy' }}</p>
+    <p>{{ currentDate | date:'shortTime' }}</p>
+    <p>{{ currentDate | date:'d' }}</p>
+    <p>{{ currentDate | date:'w' }}</p>
+  
+    <!-- Currency Pipes -->
+    <p>{{ price | currency:'USD':'symbol':'1.2-2' }}</p>
+    <p>{{ price | currency:'USD':'code':'1.2-2' }}</p>
+    <p>{{ price | currency:'INR':'symbol':'1.2-2' }}</p>
+    <p>{{ price | currency:'GBP':'symbol':'1.2-2' }}</p>
+  
+    <!-- Async Pipes -->
+    <p>{{ arrayStream$ | async }}</p>
+    <p>{{ transformedData$ | async }}</p>
+  
+    <!-- JSON Pipes -->
+    <p>{{ nestedArrays | json }}</p>
+    <p>{{ complexData | json }}</p>
+    <p>{{ mixedTypes | json }}</p>
+  
+    <!-- Slice Pipes -->
+    <p>{{ numbers | slice:3:6 }}</p>
+    <p>{{ numbers | slice:-3 }}</p>
+    <p>{{ longString | slice:-2 }}</p>
+    <p>{{ longString | slice:0:5 }}</p>
+  </div>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 10px 0;
+    }
+
+    div {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</body>
+</html>
+
+<router-outlet />
